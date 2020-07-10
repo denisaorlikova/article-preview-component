@@ -18,8 +18,11 @@
         <div class="container-author flex">
           <div class="flex flex-center">
             <img class="img-avatar" src="images/avatar-michelle.jpg" alt="Michelle Appleton portrait">
-            <p>Michelle Appleton</p>
-            <p>28 Jun 2020</p>
+            <div class="container-name flex flex-column" >
+              <p>Michelle Appleton</p>
+              <br>
+              <p>28 Jun 2020</p>
+            </div>
           </div>
           <button class="tooltip fa fa-share" onclick="myFunction()">
             <span class="tooltiptext" id="myTooltip">
@@ -31,20 +34,22 @@
           </button>
         </div>
       </div>
+      <div class="flex mobile-share tooltiptext" id="mobileTooltip">
+          Share
+          <a href="#" class="fa fa-facebook"></a>
+          <a href="#" class="fa fa-twitter"></a>
+          <a href="#" class="fa fa-pinterest"></a>
+          <button class="tooltip fa fa-share" onclick="myFunction()">
+          </button>
+      </div>
     </div>
     <script>
       function myFunction() {
         var x = document.getElementById("myTooltip");
-        var y = document.getElementById("myCard");
         if (x.style.display === "none") {
           x.style.display = "flex";
         } else {
           x.style.display = "none";
-        }
-        if (y.style.overflow === "hidden") {
-          y.style.overflow = "visible";
-        } else {
-          y.style.overflow = "hidden";
         }
       }
     </script>
