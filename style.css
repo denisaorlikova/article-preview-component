@@ -177,7 +177,7 @@ h4 {
   align-items: center;
 }
 
-@media screen and (min-width:375px) {
+@media screen and (min-width:305px) {
   .card {
     width: 70%;
   }
@@ -188,6 +188,14 @@ h4 {
 
   .article-img {
     border-radius: 10px 10px 0px 0px;
+  }
+
+  .desktop {
+    display: none;
+  }
+
+  .mobile {
+    display: flex;
   }
 }
 
@@ -217,7 +225,7 @@ h4 {
   .card {
     display: flex;
     width: 50%;
-    height: 250px;
+    height: 300px;
   }
 
   .container, .container-author {
@@ -232,4 +240,17 @@ h4 {
     width: 30%;
     object-fit: cover;
   }
+
+  .desktop {
+    display: flex;
+  }
+
+  .mobile {
+    display: none;
+  }
 }
+
+@media screen and (min-width: 1080px) {
+  .card {
+    height: 250px;
+  }

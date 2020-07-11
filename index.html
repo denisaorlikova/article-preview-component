@@ -15,7 +15,7 @@
           <h4>Shift the overall look and feel by adding these wonderful touches to furniture in your home</h4>
           <p>Ever been in a room and felt like something was missing? Perhaps it felt slightly bare or uninviting. I've got some simple tips to help you make any room feel complete.</p>
         </div>
-        <div class="container-author flex">
+        <div class="container-author flex desktop">
           <div class="flex flex-center">
             <img class="img-avatar" src="images/avatar-michelle.jpg" alt="Michelle Appleton portrait">
             <div class="container-name flex flex-column" >
@@ -33,13 +33,26 @@
             </span>
           </button>
         </div>
+        <div class="container-author flex mobile" id="authorMobile">
+          <div class="flex flex-center">
+            <img class="img-avatar" src="images/avatar-michelle.jpg" alt="Michelle Appleton portrait">
+            <div class="container-name flex flex-column" >
+              <p>Michelle Appleton</p>
+              <br>
+              <p>28 Jun 2020</p>
+            </div>
+          </div>
+          <button class="tooltip fa fa-share" onclick="mobileFunction()">
+          </button>
+
+        </div>
       </div>
       <div class="flex mobile-share tooltiptext" id="mobileTooltip">
           Share
           <a href="#" class="fa fa-facebook"></a>
           <a href="#" class="fa fa-twitter"></a>
           <a href="#" class="fa fa-pinterest"></a>
-          <button class="tooltip fa fa-share" onclick="myFunction()">
+          <button class="tooltip fa fa-share" onclick="mobileFunction()">
           </button>
       </div>
     </div>
@@ -50,6 +63,19 @@
           x.style.display = "flex";
         } else {
           x.style.display = "none";
+        }
+      }
+
+      function mobileFunction() {
+        var y = document.getElementById("mobileTooltip");
+        var z = document.getElementById("authorMobile");
+        if (y.style.display === "none") {
+          y.style.display = "flex";
+          z.style.display = "none";
+        }
+        else {
+          y.style.display = "none";
+          z.style.display = "flex";
         }
       }
     </script>
